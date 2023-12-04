@@ -1,0 +1,11 @@
+.auth-login{
+    padding: 200px 250px ;
+   display: inline-flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-direction: column;
+
+}
+body{
+    background-color: aquamarine;
+}
