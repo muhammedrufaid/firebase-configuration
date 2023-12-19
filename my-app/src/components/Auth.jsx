@@ -7,9 +7,8 @@ function Auth() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  //button click cheyyumbm authentication nadakkan oru function create cheyyunnu
-const signUp = async() =>{ //async-sign In button click cheyyumbm firebase chennit user enna value create aavenm njmla account athinu kurchu time edkkum angna time edkunna functions ellam asynchronous function aayrikum
-    //ivde email password authenticationnan so firebase auth il ninnu mattoru hook firebase therunnd aa oru hook elle/ functionte name parnjal createUSer with email and password athu athyam import cheyyenm 
+  //onclick - authentication work
+const signUp = async() =>{ 
   try{
       await createUserWithEmailAndPassword(auth,email,password)
   }catch(err){
@@ -17,19 +16,19 @@ const signUp = async() =>{ //async-sign In button click cheyyumbm firebase chenn
   }
 }
 // console.log(auth);
-console.log(auth?.currentUser); //user illatha samayath appinu break verathirikkan ? question mark kodukkune
+//no user then do not break so ?
+console.log(auth?.currentUser);
 
 
-//signoutinu vendi firebase oru hook therunnd athinta name signOut thanneyan athum import cheyyuka
 const logOut = async() =>{
     await signOut(auth)
 }
 
-//signup cheythenu sheshm logout veendum signin cheyyumbm ithu work aavilla
 const verifyEmail = async() =>{
     await sendEmailVerification(auth.currentUser)
 }
 
+//signin verify email,password for authenication
 const signIn = async() =>{
     try{
         await signInWithEmailAndPassword(auth,email,password)
@@ -38,7 +37,7 @@ const signIn = async() =>{
     }
 }
 
-//password maatan
+//password change
 const reset = async()=>{
     try{
         await sendPasswordResetEmail(auth,email)

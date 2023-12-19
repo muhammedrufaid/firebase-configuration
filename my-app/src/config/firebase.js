@@ -1,7 +1,4 @@
-//app initialize cheyyan vendi initializeApp import cheyyenm
 import { initializeApp } from "firebase/app";
-//authentication oru function import cheyyenm adiiyil
-// import {getAuth} from 'firebase/auth' //authentification vendi firebase therunna aa oru functionan getAuth (firebase login code react google search cheythal appm documentationil kannan patum ee code)
 import {getFirestore} from 'firebase/firestore'
 
 const firebaseConfig = {
@@ -16,7 +13,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-//njml initalizeApp il firebaseConfig pass cheytha pola thanne getAuth enna functione adiyil call cheyyam ennit athil njmla appil firebasinta kaaryengal ellam koduthittund aa app ithil pass cheythu kodukkam ennit athine oru variableil assign cheythu
-// export const auth = getAuth(app) //ee firebasil email authentication ella karyengalum cheythu kaynu
+// export const auth = getAuth(app) 
 
 export const db = getFirestore(app);

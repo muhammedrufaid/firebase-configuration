@@ -11,7 +11,7 @@ const PhoneAuth = () => {
 
   console.log(auth.currentUser);
 
-  //first njmlk otp send cheyyenm  otp send cheyyunenda 1st step recaptcha verifier create cheyyuka
+ //otp send -1st step recaptcha create
   const sendOtp = async () => {
     try {
       //putyoru recaptcha verifier aanu njmk ella thavaneyum create cheyyendath athukond new koduth
