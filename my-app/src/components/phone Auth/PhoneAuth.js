@@ -14,9 +14,8 @@ const PhoneAuth = () => {
  //otp send -1st step recaptcha create
   const sendOtp = async () => {
     try {
-      //putyoru recaptcha verifier aanu njmk ella thavaneyum create cheyyendath athukond new koduth
+      //new captcha verifier all time create
       let recaptchaVerifier = await new RecaptchaVerifier("recaptcha",{},auth);
-      //eni ee recaptcha verifier appil display cheyyenm athinu vendi "recaptcha" - ee string aanu use cheyyunath ithinu enthum name u kodukkam njml recaptcha koduth .ee oru string ne id aaytanu use cheyyunath
       let confirmation = await signInWithPhoneNumber(auth,phone,recaptchaVerifier);
       console.log(confirmation);
       setUser(confirmation)
